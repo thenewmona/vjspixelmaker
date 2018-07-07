@@ -1,0 +1,4 @@
+Pixel Maker in Vanilla JS 
+These are the resources that I used 
+
+*https://discussions.udacity.com/t/pixel-art-maker-solution-walkthrough/636632*
