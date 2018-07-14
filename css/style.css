@@ -1,20 +1,36 @@
 body {
   text-align: center;
+  background-image: url("https://lh3.googleusercontent.com/sFL5Qj32aD7QydsAPWwznFg1OLbQTm0isMoJk4FnOcKegMTTk7AzZpGR-PnkXRcz9MAXgyHAJu4YPCLBi4H6mkbPn3KGz1iE61U8zjz-cIX3PjYVuajHe6auO6O_wpmrtQ3GZLW8zzHm1iuBwun6O1OEQnhJFaHRoIkntMqNaKj4Acg3WIVwxzGVdwy9Vmg5Bpjhqbt2YwuPvB6QuI1eQguPGeQ1UxjwDCO51z9JfBIXoscGwmxEtIf5TZ5MomGgXIHmInWIw8tZhLAupTZ-M83OFDjHVtHeqn5PTKHYDk4jHt7axZSDaWCT_w5pkIwovl2Z2TnNvAJPzdfd1CvaKV7Dr952CO4EcFBXhr5lIAx8Va7VgCk7Fi1Lr60aLfgjp-t6DKjZ6pw_zx62qOzisLUCDj6ZuvHVGvDSHcHtgrOFaXZ7C94r9pzhe87n3AzmlrzOSPqQQF_4T9peA7ZpJXDAbaLEVs5EWnQ9DlYDqjTxfd62bWAznLf8fdb1amvc4beiKkpGJa4hV8skoQKgqS8SypeAhHRbfrgKS-lJ6z9IxPz8GYlqXZYoCzsR33cfnnJMP8WHiG46lsquKvUQokZaeSgPpWOY2Vq5Sffl=w423-h769-no");
+  background-color: rgb(2, 68, 2);
+  /*need to fix the picture from repeating*/
+  background-repeat: no-repeat;
+  background-size: 75%;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-h1 {
-  font-family: Monoton;
-  font-size: 70px;
-  margin: 0.2em;
-}
+/*why is the text and grid box moving*/
 
 h2 {
-  margin: 1em 0 0.25em;
+  margin: 2em 0 0.25em;
 }
 
-h2:first-of-type {
-  margin-top: 0.5em;
+/*h2:first-of-type {
+  margin-bottom: 0.5em;
+}*/
+
+/*got the radient idea from Roderick's project, see resources for notes*/
+
+h1 {
+  font-family: "Faster One", cursive;
+  font-size: 100px;
+  background: -webkit-linear-gradient(rgb(3, 3, 3), #a0f81b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 2.0em;
 }
+
+/* why is grid not showing up*/
 
 table,
 tr,
@@ -35,6 +51,6 @@ td {
   width: 20px;
 }
 
-input[type="number"] {
+input[type=number] {
   width: 6em;
 }
