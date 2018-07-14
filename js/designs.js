@@ -1,46 +1,32 @@
 // Select color input
-const color = document.getElementById('#colorPicker');
+let color = document.getElementById('#colorPicker');
+let table = document.getElementById('#pixelCanvas');
+let sizePicker = document.getElementById('sizePicker');
 
 // Select size input
-const height = document.querySelector('#inputHeight');
-const width = document.querySelector('#inputWidth');
-const sizePicker = document.querySelector('#sizePicker');
-const canvas = document.querySelector('#pixelCanvas');
-// When size is submitted by the user, call makeGrid()
-function clearOldGrid() {
-  //clear the grid
-  canvas.innerHTML = '';
+height = document.getElementById('inputHeight');
+width = document.getElementById('inputWidth');
+
+
+sizePicker.addEventListener('click', (e) => {
+  e.preventDefault(); //this makes it so the grid will stay, instead of disappear
+  //https://www.w3schools.com/jsref/event_preventdefault.asp
+  makeGrid(height, width);
+
+
+
+  // console.log(e + 'test');//passed
+  // console.log(height.value, width.value);//passed 
+  //console.log(color.val); //will not out pass 
+});
+
+// Your code goes here!
+//make a grid
+// create table for loops
+
+function makeGrid(height, width) {
+
+  //https://www.w3schools.com/jsref/met_table_insertrow.asp
+  let row = (table.insertRow());
+  console.log(height, width);
 }
-
-function makeGrid() {
-  let tr, td;
-
-  // Your code goes here!
-
-  // create table for loops 
-
-  for (let i = 0; i < height.val; i++) {
-    tr = document.createElement('tr');
-    canvas.appendChild(tr);
-    for (let j = 0; j < width.value; j++) {
-      td = document.createElement('td');
-      tr.appendChild(td);
-    }
-  }
-}
-
-function changeCellColor() {
-
-  canvas.addEventListener('click', function (e) {
-    e.preventDefault();
-    if (e.target.nedeName === 'TD') {
-      e.target.style.bacgroundColor = color.value;
-    }
-  })
-}
-sizePicker.addEventListener('submit', function (e) {
-  e.preventDefault();
-  clearOldGrid();
-  makeGrid();
-  changeCellColor();
-})
