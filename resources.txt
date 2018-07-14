@@ -23,3 +23,6 @@ From line 25, column 3; to line 25, column 39
 or</h2>↩  <input type="color" id="colorPicker">↩↩  <h_
  https://validator.w3.org/nu/#textarea
 https://stackoverflow.com/questions/26107125/cannot-read-property-addeventlistener-of-null
+
+finally passed had to fix the addEventListerner 
+https://snag.gy/kyGziT.jpg
