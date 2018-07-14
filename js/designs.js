@@ -1,32 +1,43 @@
 // Select color input
-let color = document.getElementById('#colorPicker');
-let table = document.getElementById('#pixelCanvas');
-let sizePicker = document.getElementById('sizePicker');
+let color = document.querySelector('#colorPicker');
 
 // Select size input
-height = document.getElementById('inputHeight');
-width = document.getElementById('inputWidth');
 
+let height = document.querySelector('#inputHeight');
+let width = document.querySelector('inputWidth');
+let sizePicker = document.querySelector('sizePicker');
+let canvas = document.querySelector('pixelCanvas');
 
-sizePicker.addEventListener('click', (e) => {
-  e.preventDefault(); //this makes it so the grid will stay, instead of disappear
-  //https://www.w3schools.com/jsref/event_preventdefault.asp
-  makeGrid(height, width);
+//this makes it so the grid will stay, instead of disappear
+//https://www.w3schools.com/jsref/event_preventdefault.asp
+function makeGrid() {
+  //clear the old grid
+  canvas.innerHTML = '';
+  let tr, td;
 
+  // Your code goes here!
+  //make a grid
 
+  // create table with for loops
 
-  // console.log(e + 'test');//passed
-  // console.log(height.value, width.value);//passed 
-  //console.log(color.val); //will not out pass 
-});
+  for (let i = 0; i < height.value; i++) {
+    tr = document.createElement('tr');
+    canvas.appendChild(tr);
 
-// Your code goes here!
-//make a grid
-// create table for loops
-
-function makeGrid(height, width) {
-
-  //https://www.w3schools.com/jsref/met_table_insertrow.asp
-  let row = (table.insertRow());
-  console.log(height, width);
+    for (let j = 0; j < width.value; j++) {
+      td = document.createElement('td');
+      tr.appendChild(td);
+    }
+  }
 }
+
+canvas.addEventListener('click', function (e) {
+  e.preventDefault();
+  if (e.target.nodeName === 'TD') {
+    e.target.style.backgroundColor = color.value;
+  }
+})
+sizePicker.addEventListener('submit', function (e) {
+  e.preventDefault();
+  makeGrid();
+})

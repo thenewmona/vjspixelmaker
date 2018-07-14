@@ -2,3 +2,24 @@ Pixel Maker in Vanilla JS
 These are the resources that I used 
 
 *https://discussions.udacity.com/t/pixel-art-maker-solution-walkthrough/636632*
+
+*insertRow
+https://www.w3schools.com/jsref/met_table_insertrow.asp
+
+*Preventdefault
+https://www.w3schools.com/jsref/event_preventdefault.asp
+
+Alan Code - Udacity Team lead video for VanillaJS
+https://www.youtube.com/watch?v=iMeGEsVAEO8
+
+cannot read property 'addEventListerner' of null at designs.js.34 
+*I have verified that pixelCanvas is correct in both HTML and JS
+I have validated via HTML validator 
+Only got this 
+_Warning: The color input type is not supported in all browsers. Please be sure to test, and consider using a polyfill.
+
+From line 25, column 3; to line 25, column 39
+
+or</h2>↩  <input type="color" id="colorPicker">↩↩  <h_
+ https://validator.w3.org/nu/#textarea
+https://stackoverflow.com/questions/26107125/cannot-read-property-addeventlistener-of-null
